@@ -1,4 +1,11 @@
+require './config/environment'
+require 'pry'
+
 class UsersController < ApplicationController
-  has_many :tweets
+
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+  end
 
 end
